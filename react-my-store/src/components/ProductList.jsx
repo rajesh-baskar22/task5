@@ -23,15 +23,16 @@ function ProductList({cartItems, setCartItems}) {
   return (
     
 
-    <div className='grid grid-cols-1 md:grid-cols-3 gap-6 p-4'>
+    <div className='grid grid-cols-1 md:grid-cols-3 gap-6 p-10'>
      
      {products.map((product)=>
      (
-      <div key={product.id} className='border border-blue-300 p-4 rounded-lg shadow-lg bg-white'>
-      <img src={product.image} alt={product.title} className='h-40 mx-auto mb-4'/>
-      <h2 className='text-lg font-semibold text-gray-600'>{product.title}</h2>
-      <p className='text-lg text-red-600 font-bold'>{product.price}</p>
-      <button onClick={()=> addToCart(product)} className='bg-blue-600 text-white w-full py-2 my-2 rounded-full'>Add To Cart</button>
+      <div key={product.id} className='border border-blue-300 p-2 rounded-lg shadow-lg bg-white mt-11'>
+      <img src={product.image} alt={product.title} className='h-40 w-40 mx-auto mb-10'/>
+      <h2 className='text-lg font-italic text-indigo-600'>{product.title}</h2>
+      <p className='text-lg text-black-600 font-bold'>{product.price}</p>
+      <button onClick={()=> addToCart(product)} className='bg-blue-400 text-white w-40 py-2 my-2 rounded-xl items-center'>Add To Cart</button>
+     
 
       </div>
      ))}

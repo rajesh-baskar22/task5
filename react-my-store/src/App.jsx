@@ -19,12 +19,12 @@ function App() {
         setCartItems(cartItems.filter((item)=> item.id !== productId ))
       };
   return (
-    <div className='bg-gray-300 min-h-screen'>
+    <div className='bg-gray-500 min-h-screen'>
         <Navbar cartCount={cartItems.length} openCart ={openCart}/>
         <ProductList cartItems={cartItems} setCartItems={setCartItems} />
         {
            isCartOpen && (
-            <CartModal cartItems={cartItems} closeCart={closeCart} removeCart={removeCart} />
+            <CartModal cartItems={cartItems} closeCart={closeCart} removeCart={removeCart}  />
            )
         }
        
